@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script
+        src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body>
+    <a-scene arjs embedded>
+        <!-- 文字 -->
+        <!-- <a-text value="Bilibili" color="pink" rotation="-90 0 0"></a-text> -->
+
+        <!-- 图片 -->
+        <!-- <a-image src="../assets/images/arknights.png" rotation="-90 0 0"></a-image> -->
+
+        <!-- 模型 -->
+        <a-entity gltf-model="../assets/models/cartoon-gltf/scene.gltf" position="0 1 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+        </a-entity>
+
+        <a-marker-camera preset='hiro'></a-marker-camera>
+
+        <!-- 自定义生成的marker -->
+        <!-- <a-marker-camera type="pattern" url="../assets/patterns/bilibili.patt"></a-marker-camera> -->
+    </a-scene>
+</body>
+
+</html>
